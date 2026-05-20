@@ -1,0 +1,1826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Agri Experts™ | Learn • Grow • Earn | Organic Farming India</title>
+  <meta name="description" content="The Agri Experts™ – India's premium platform for organic farming tips, smart agriculture, and agri business growth. Learn proven strategies to grow more and earn more from your farm." />
+  <meta name="keywords" content="organic farming India, farming tips India, agri business ideas, smart agriculture, organic farming Haryana, Karnal farmers" />
+  <meta name="author" content="The Agri Experts™" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://theagriexperts.in/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="The Agri Experts™ | Learn • Grow • Earn" />
+  <meta property="og:description" content="India's premium platform for organic farming, smart agriculture & agri business growth." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://theagriexperts.in/" />
+  <meta property="og:image" content="https://theagriexperts.in/og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@theagriexperts" />
+  <meta name="twitter:title" content="The Agri Experts™ | Learn • Grow • Earn" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "The Agri Experts™",
+    "description": "Premium platform for organic farming, smart agriculture and agri business growth in India",
+    "url": "https://theagriexperts.in",
+    "telephone": "+91-XXXXXXXXXX",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "House No. 33, Matluada Village",
+      "addressLocality": "Karnal",
+      "addressRegion": "Haryana",
+      "postalCode": "132001",
+      "addressCountry": "IN"
+    },
+    "sameAs": [
+      "https://instagram.com/theagriexperts",
+      "https://youtube.com/@theagriexperts",
+      "https://facebook.com/theagriexperts",
+      "https://linkedin.com/company/theagriexperts",
+      "https://twitter.com/theagriexperts"
+    ]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================
+       CSS VARIABLES & RESET
+    ============================ */
+    :root {
+      --green-900: #0d3b1e;
+      --green-800: #145228;
+      --green-700: #1a6b33;
+      --green-600: #228B44;
+      --green-500: #2daa55;
+      --green-400: #4dc876;
+      --green-300: #80dfa0;
+      --green-100: #e8f7ed;
+      --green-50:  #f2fbf5;
+      --earth-900: #3b2a1a;
+      --earth-700: #6b4c2a;
+      --earth-400: #c49a6c;
+      --earth-100: #f5ede0;
+      --gold:      #d4a843;
+      --gold-light:#f0c96a;
+      --white:     #ffffff;
+      --off-white: #fafef9;
+      --text-dark: #1a2e1e;
+      --text-mid:  #3d5440;
+      --text-light:#6b8870;
+      --shadow-sm: 0 2px 12px rgba(13,59,30,0.08);
+      --shadow-md: 0 8px 32px rgba(13,59,30,0.12);
+      --shadow-lg: 0 20px 60px rgba(13,59,30,0.18);
+      --radius-sm: 12px;
+      --radius-md: 20px;
+      --radius-lg: 32px;
+      --radius-xl: 48px;
+      --transition: 0.35s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text-dark);
+      background: var(--off-white);
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+    /* ============================
+       SCROLL PROGRESS BAR
+    ============================ */
+    #progress-bar {
+      position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+      background: linear-gradient(90deg, var(--green-500), var(--gold));
+      z-index: 9999; transition: width 0.1s linear;
+    }
+
+    /* ============================
+       HEADER / NAV
+    ============================ */
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 0 5%;
+      transition: all var(--transition);
+    }
+    header.scrolled {
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: var(--shadow-sm);
+      padding: 0 5%;
+    }
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .logo-icon {
+      width: 42px; height: 42px;
+      background: linear-gradient(135deg, var(--green-600), var(--green-400));
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+    }
+    .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--green-900);
+      line-height: 1.2;
+    }
+    .logo-text span { color: var(--green-600); }
+    .logo-tag {
+      font-size: 0.6rem;
+      font-weight: 500;
+      color: var(--text-light);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+    .nav-links {
+      display: flex; align-items: center; gap: 2rem;
+    }
+    .nav-links a {
+      font-size: 0.9rem; font-weight: 500;
+      color: var(--text-mid);
+      position: relative; padding: 4px 0;
+      transition: color var(--transition);
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: 0; left: 0;
+      width: 0; height: 2px;
+      background: var(--green-500);
+      border-radius: 2px;
+      transition: width var(--transition);
+    }
+    .nav-links a:hover { color: var(--green-700); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta {
+      background: var(--green-600) !important;
+      color: var(--white) !important;
+      padding: 10px 22px !important;
+      border-radius: 50px !important;
+      font-weight: 600 !important;
+      transition: all var(--transition) !important;
+      box-shadow: 0 4px 16px rgba(34,139,68,0.3);
+    }
+    .nav-cta:hover {
+      background: var(--green-700) !important;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(34,139,68,0.4) !important;
+    }
+    .nav-cta::after { display: none !important; }
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      padding: 8px; cursor: pointer;
+    }
+    .hamburger span {
+      display: block; width: 24px; height: 2px;
+      background: var(--green-800); border-radius: 2px;
+      transition: all var(--transition);
+    }
+    .mobile-menu {
+      display: none; position: fixed;
+      top: 72px; left: 0; right: 0;
+      background: rgba(255,255,255,0.98);
+      backdrop-filter: blur(20px);
+      padding: 1.5rem 5%;
+      box-shadow: var(--shadow-md);
+      z-index: 999;
+      flex-direction: column; gap: 1rem;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-size: 1rem; font-weight: 500;
+      color: var(--text-dark); padding: 0.5rem 0;
+      border-bottom: 1px solid var(--green-100);
+    }
+
+    /* ============================
+       SECTION UTILITIES
+    ============================ */
+    section { padding: 100px 5%; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .section-label {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--green-600);
+      background: var(--green-50);
+      border: 1px solid var(--green-200, #c3e8ce);
+      padding: 6px 16px; border-radius: 50px;
+      margin-bottom: 1.2rem;
+    }
+    .section-label::before { content: ''; width: 6px; height: 6px; background: var(--green-500); border-radius: 50%; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; line-height: 1.2; }
+    h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); font-weight: 800; }
+    h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; }
+    h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); font-weight: 600; }
+    h4 { font-size: 1.1rem; font-weight: 600; }
+    .text-green { color: var(--green-600); }
+    .text-gold { color: var(--gold); }
+
+    /* Scroll animations */
+    .reveal {
+      opacity: 0; transform: translateY(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-left {
+      opacity: 0; transform: translateX(-40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal-left.visible { opacity: 1; transform: translateX(0); }
+    .reveal-right {
+      opacity: 0; transform: translateX(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+    /* Stagger delays */
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
+    .delay-5 { transition-delay: 0.5s; }
+
+    /* ============================
+       HERO SECTION
+    ============================ */
+    #home {
+      min-height: 100vh;
+      background: linear-gradient(160deg, var(--green-900) 0%, var(--green-800) 45%, var(--earth-900) 100%);
+      display: flex; align-items: center;
+      position: relative; overflow: hidden;
+      padding-top: 120px;
+    }
+    .hero-bg-pattern {
+      position: absolute; inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 50%, rgba(45,170,85,0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(212,168,67,0.1) 0%, transparent 40%),
+        radial-gradient(circle at 60% 80%, rgba(45,170,85,0.08) 0%, transparent 40%);
+    }
+    .hero-grid {
+      position: absolute; inset: 0; opacity: 0.04;
+      background-image: linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 4rem; align-items: center;
+      max-width: 1200px; margin: 0 auto; width: 100%;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 8px 18px; border-radius: 50px;
+      margin-bottom: 1.5rem;
+      color: var(--gold-light);
+      font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .hero-badge .dot { width: 8px; height: 8px; background: var(--gold); border-radius: 50%; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.4);opacity:0.7} }
+    .hero-left h1 { color: var(--white); margin-bottom: 1.5rem; }
+    .hero-left h1 em {
+      font-style: italic;
+      color: var(--gold-light);
+      font-family: 'DM Serif Display', serif;
+    }
+    .hero-sub {
+      color: rgba(255,255,255,0.75);
+      font-size: 1.1rem; font-weight: 300;
+      max-width: 480px;
+      margin-bottom: 2.5rem;
+      line-height: 1.8;
+    }
+    .hero-ctas {
+      display: flex; flex-wrap: wrap; gap: 1rem;
+      margin-bottom: 3rem;
+    }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--green-500);
+      color: var(--white);
+      padding: 14px 30px; border-radius: 50px;
+      font-weight: 600; font-size: 0.95rem;
+      transition: all var(--transition);
+      box-shadow: 0 6px 20px rgba(45,170,85,0.4);
+    }
+    .btn-primary:hover { background: var(--green-400); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(45,170,85,0.5); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.12);
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 14px 30px; border-radius: 50px;
+      font-weight: 500; font-size: 0.95rem;
+      transition: all var(--transition);
+      backdrop-filter: blur(10px);
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.2); transform: translateY(-2px); }
+    .btn-wa {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #25d366;
+      color: var(--white);
+      padding: 14px 30px; border-radius: 50px;
+      font-weight: 600; font-size: 0.95rem;
+      transition: all var(--transition);
+      box-shadow: 0 6px 20px rgba(37,211,102,0.4);
+    }
+    .btn-wa:hover { background: #1fb855; transform: translateY(-2px); }
+    .hero-stats {
+      display: flex; gap: 2rem;
+    }
+    .stat {
+      text-align: left;
+    }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem; font-weight: 800;
+      color: var(--gold-light);
+      line-height: 1;
+    }
+    .stat-label { color: rgba(255,255,255,0.6); font-size: 0.8rem; margin-top: 4px; }
+
+    .hero-right {
+      display: flex; flex-direction: column; gap: 1.5rem;
+    }
+    .hero-card {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .hero-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
+    .hero-card-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+    .hero-card h4 { color: var(--white); margin-bottom: 0.4rem; }
+    .hero-card p { color: rgba(255,255,255,0.65); font-size: 0.875rem; }
+    .hero-cards-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .hero-main-card {
+      background: linear-gradient(135deg, rgba(45,170,85,0.25), rgba(212,168,67,0.15));
+      border-color: rgba(45,170,85,0.3);
+    }
+
+    /* ============================
+       MARQUEE / TICKER
+    ============================ */
+    .marquee-section {
+      background: var(--green-900);
+      padding: 18px 0; overflow: hidden;
+    }
+    .marquee-track {
+      display: flex; gap: 3rem;
+      animation: marquee 25s linear infinite;
+      white-space: nowrap; width: max-content;
+    }
+    .marquee-item {
+      display: flex; align-items: center; gap: 1rem;
+      color: rgba(255,255,255,0.7); font-size: 0.875rem; font-weight: 500;
+    }
+    .marquee-dot { color: var(--gold); font-size: 1.2rem; }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* ============================
+       ABOUT SECTION
+    ============================ */
+    #about { background: var(--white); }
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: center;
+    }
+    .about-img-wrap {
+      position: relative;
+    }
+    .about-img-placeholder {
+      width: 100%; aspect-ratio: 4/5;
+      background: linear-gradient(135deg, var(--green-100), var(--earth-100));
+      border-radius: var(--radius-lg);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 6rem;
+      position: relative; overflow: hidden;
+    }
+    .about-img-placeholder::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 50%, rgba(13,59,30,0.3));
+    }
+    .about-badge-float {
+      position: absolute; bottom: 1.5rem; left: 1.5rem;
+      background: var(--white);
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.5rem;
+      box-shadow: var(--shadow-md);
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .about-badge-float .num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem; font-weight: 800;
+      color: var(--green-600); line-height: 1;
+    }
+    .about-badge-float .lbl {
+      font-size: 0.75rem; color: var(--text-light); font-weight: 500;
+    }
+    .about-badge-float2 {
+      position: absolute; top: 1.5rem; right: -1.5rem;
+      background: var(--green-600);
+      color: var(--white);
+      border-radius: var(--radius-sm);
+      padding: 0.75rem 1.2rem;
+      box-shadow: var(--shadow-md);
+      font-size: 0.8rem; font-weight: 600;
+      text-align: center;
+    }
+    .about-right p {
+      color: var(--text-mid); margin-bottom: 1.2rem;
+      font-size: 1rem;
+    }
+    .values-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1rem; margin-top: 2rem;
+    }
+    .value-item {
+      display: flex; align-items: flex-start; gap: 0.75rem;
+      padding: 1rem;
+      background: var(--green-50);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--green-100);
+    }
+    .value-icon { font-size: 1.5rem; flex-shrink: 0; }
+    .value-text h5 { font-size: 0.9rem; font-weight: 600; color: var(--green-900); margin-bottom: 2px; }
+    .value-text p { font-size: 0.8rem; color: var(--text-light); line-height: 1.5; }
+
+    /* ============================
+       SERVICES SECTION
+    ============================ */
+    #services { background: var(--off-white); }
+    .services-header { text-align: center; max-width: 600px; margin: 0 auto 4rem; }
+    .services-header p { color: var(--text-mid); margin-top: 1rem; font-size: 1.05rem; }
+    .services-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+    }
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 2.5rem 2rem;
+      border: 1px solid transparent;
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition);
+      position: relative; overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, var(--green-500), var(--gold));
+      transform: scaleX(0); transform-origin: left;
+      transition: transform var(--transition);
+    }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--green-100);
+    }
+    .service-icon {
+      width: 64px; height: 64px;
+      background: linear-gradient(135deg, var(--green-100), var(--green-50));
+      border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.8rem; margin-bottom: 1.5rem;
+      transition: transform var(--transition);
+    }
+    .service-card:hover .service-icon { transform: scale(1.1) rotate(-5deg); }
+    .service-card h3 { margin-bottom: 0.75rem; color: var(--green-900); }
+    .service-card p { color: var(--text-mid); font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.5rem; }
+    .service-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      color: var(--green-600); font-weight: 600; font-size: 0.875rem;
+      transition: gap var(--transition);
+    }
+    .service-card:hover .service-link { gap: 12px; }
+
+    /* ============================
+       PRODUCTS SECTION
+    ============================ */
+    #products { background: var(--white); }
+    .products-header { text-align: center; max-width: 600px; margin: 0 auto 4rem; }
+    .products-header p { color: var(--text-mid); margin-top: 1rem; }
+    .products-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;
+    }
+    .product-card {
+      background: var(--off-white);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid rgba(13,59,30,0.08);
+      transition: all var(--transition);
+      cursor: pointer;
+    }
+    .product-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+    .product-img {
+      aspect-ratio: 1/1;
+      background: linear-gradient(135deg, var(--green-100), var(--earth-100));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3.5rem;
+      position: relative; overflow: hidden;
+    }
+    .product-badge {
+      position: absolute; top: 10px; right: 10px;
+      background: var(--green-600); color: var(--white);
+      font-size: 0.7rem; font-weight: 700;
+      padding: 4px 10px; border-radius: 50px;
+      letter-spacing: 0.05em;
+    }
+    .product-info { padding: 1.2rem; }
+    .product-info h4 { color: var(--green-900); margin-bottom: 0.3rem; font-size: 1rem; }
+    .product-info p { color: var(--text-light); font-size: 0.8rem; }
+    .product-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0.75rem 1.2rem;
+      border-top: 1px solid var(--green-100);
+    }
+    .product-price { font-weight: 700; color: var(--green-700); font-size: 1rem; }
+    .product-btn {
+      background: var(--green-600); color: var(--white);
+      padding: 6px 14px; border-radius: 50px;
+      font-size: 0.8rem; font-weight: 600;
+      transition: background var(--transition);
+    }
+    .product-btn:hover { background: var(--green-700); }
+
+    /* ============================
+       BLOG SECTION
+    ============================ */
+    #blog { background: var(--off-white); }
+    .blog-header { text-align: center; max-width: 600px; margin: 0 auto 4rem; }
+    .blog-header p { color: var(--text-mid); margin-top: 1rem; }
+    .blog-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .blog-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition);
+      cursor: pointer;
+    }
+    .blog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .blog-img {
+      aspect-ratio: 16/9;
+      background: linear-gradient(135deg, var(--green-800), var(--green-600));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3rem; color: rgba(255,255,255,0.3);
+      position: relative; overflow: hidden;
+    }
+    .blog-card.featured .blog-img { aspect-ratio: 16/10; font-size: 4rem; }
+    .blog-category {
+      position: absolute; top: 12px; left: 12px;
+      background: var(--gold);
+      color: var(--earth-900);
+      font-size: 0.7rem; font-weight: 700;
+      padding: 4px 12px; border-radius: 50px;
+      letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    .blog-body { padding: 1.5rem; }
+    .blog-meta {
+      display: flex; align-items: center; gap: 0.75rem;
+      font-size: 0.75rem; color: var(--text-light);
+      margin-bottom: 0.75rem;
+    }
+    .blog-meta span { display: flex; align-items: center; gap: 4px; }
+    .blog-body h3 { color: var(--green-900); margin-bottom: 0.5rem; font-size: 1.1rem; }
+    .blog-body p { color: var(--text-mid); font-size: 0.875rem; line-height: 1.65; }
+    .blog-read {
+      display: inline-flex; align-items: center; gap: 6px;
+      color: var(--green-600); font-weight: 600; font-size: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    /* ============================
+       TESTIMONIALS
+    ============================ */
+    #testimonials { background: var(--green-900); overflow: hidden; position: relative; }
+    .testimonials-bg {
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 30% 50%, rgba(45,170,85,0.15), transparent 60%),
+                  radial-gradient(circle at 70% 30%, rgba(212,168,67,0.08), transparent 50%);
+    }
+    .testimonials-header { text-align: center; margin-bottom: 4rem; position: relative; }
+    .testimonials-header .section-label { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: var(--gold-light); }
+    .testimonials-header h2 { color: var(--white); }
+    .testimonials-header p { color: rgba(255,255,255,0.6); margin-top: 1rem; }
+    .testimonials-slider {
+      position: relative; overflow: hidden;
+    }
+    .testimonials-track {
+      display: flex; gap: 1.5rem;
+      transition: transform 0.6s cubic-bezier(0.4,0,0.2,1);
+    }
+    .testimonial-card {
+      min-width: calc(33.333% - 1rem);
+      background: rgba(255,255,255,0.07);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      flex-shrink: 0;
+    }
+    .stars { color: var(--gold); font-size: 1rem; margin-bottom: 1rem; letter-spacing: 2px; }
+    .testimonial-text {
+      color: rgba(255,255,255,0.85);
+      font-size: 0.95rem; line-height: 1.8;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+    .testimonial-author {
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .author-avatar {
+      width: 46px; height: 46px;
+      background: linear-gradient(135deg, var(--green-500), var(--green-400));
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; font-weight: 700; color: var(--white);
+      font-family: 'Playfair Display', serif;
+    }
+    .author-info h5 { color: var(--white); font-size: 0.95rem; font-weight: 600; font-family: 'DM Sans', sans-serif; }
+    .author-info p { color: rgba(255,255,255,0.55); font-size: 0.8rem; }
+    .slider-controls {
+      display: flex; align-items: center; justify-content: center;
+      gap: 1rem; margin-top: 2.5rem;
+    }
+    .slider-btn {
+      width: 44px; height: 44px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 50%;
+      color: var(--white); font-size: 1.2rem;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: all var(--transition);
+    }
+    .slider-btn:hover { background: var(--green-600); border-color: var(--green-600); }
+    .slider-dots {
+      display: flex; gap: 8px;
+    }
+    .slider-dot {
+      width: 8px; height: 8px;
+      background: rgba(255,255,255,0.3);
+      border-radius: 50%; cursor: pointer;
+      transition: all var(--transition);
+    }
+    .slider-dot.active { background: var(--gold); width: 24px; border-radius: 4px; }
+
+    /* ============================
+       INSTAGRAM SECTION
+    ============================ */
+    #instagram { background: var(--white); }
+    .insta-header { text-align: center; margin-bottom: 3rem; }
+    .insta-handle {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: linear-gradient(135deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem;
+    }
+    .insta-grid {
+      display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.75rem;
+    }
+    .insta-post {
+      aspect-ratio: 1/1;
+      border-radius: var(--radius-sm);
+      overflow: hidden; position: relative; cursor: pointer;
+      background: linear-gradient(135deg, var(--green-100), var(--green-50));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.5rem;
+      transition: transform var(--transition);
+    }
+    .insta-post:hover { transform: scale(0.95); }
+    .insta-overlay {
+      position: absolute; inset: 0;
+      background: rgba(13,59,30,0.7);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; transition: opacity var(--transition);
+      color: var(--white); font-size: 0.9rem; font-weight: 600;
+      flex-direction: column; gap: 4px;
+    }
+    .insta-post:hover .insta-overlay { opacity: 1; }
+    .insta-cta { text-align: center; margin-top: 2.5rem; }
+
+    /* ============================
+       NEWSLETTER SECTION
+    ============================ */
+    #newsletter {
+      background: linear-gradient(135deg, var(--green-700), var(--green-900));
+      position: relative; overflow: hidden;
+    }
+    .newsletter-bg {
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .newsletter-inner {
+      position: relative; text-align: center;
+      max-width: 600px; margin: 0 auto;
+    }
+    .newsletter-inner h2 { color: var(--white); margin-bottom: 1rem; }
+    .newsletter-inner p { color: rgba(255,255,255,0.75); margin-bottom: 2.5rem; font-size: 1.05rem; }
+    .newsletter-form {
+      display: flex; gap: 0;
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 50px; padding: 6px;
+    }
+    .newsletter-form input {
+      flex: 1; background: none; border: none; outline: none;
+      color: var(--white); font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem; padding: 10px 20px;
+    }
+    .newsletter-form input::placeholder { color: rgba(255,255,255,0.55); }
+    .newsletter-form button {
+      background: var(--gold);
+      color: var(--earth-900);
+      border: none; border-radius: 50px;
+      padding: 12px 28px;
+      font-weight: 700; font-size: 0.9rem;
+      cursor: pointer; transition: all var(--transition);
+      font-family: 'DM Sans', sans-serif;
+    }
+    .newsletter-form button:hover { background: var(--gold-light); transform: scale(1.02); }
+    .newsletter-perks {
+      display: flex; align-items: center; justify-content: center;
+      gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap;
+    }
+    .newsletter-perk {
+      display: flex; align-items: center; gap: 6px;
+      color: rgba(255,255,255,0.7); font-size: 0.8rem;
+    }
+    .newsletter-perk span { color: var(--green-300); }
+
+    /* ============================
+       CONTACT SECTION
+    ============================ */
+    #contact { background: var(--white); }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1.4fr;
+      gap: 4rem; align-items: start;
+    }
+    .contact-info h2 { margin-bottom: 1rem; }
+    .contact-info p { color: var(--text-mid); margin-bottom: 2rem; line-height: 1.8; }
+    .contact-items { display: flex; flex-direction: column; gap: 1rem; }
+    .contact-item {
+      display: flex; align-items: flex-start; gap: 1rem;
+      padding: 1.2rem;
+      background: var(--green-50);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--green-100);
+    }
+    .contact-item-icon {
+      width: 44px; height: 44px; flex-shrink: 0;
+      background: var(--green-600); color: var(--white);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+    }
+    .contact-item-text h5 { font-size: 0.875rem; font-weight: 600; margin-bottom: 2px; }
+    .contact-item-text p { font-size: 0.85rem; color: var(--text-mid); }
+    .social-links {
+      display: flex; gap: 0.75rem; margin-top: 2rem; flex-wrap: wrap;
+    }
+    .social-link {
+      width: 44px; height: 44px;
+      background: var(--green-50);
+      border: 1px solid var(--green-100);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      transition: all var(--transition); cursor: pointer;
+    }
+    .social-link:hover { background: var(--green-600); transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+    .contact-form {
+      background: var(--off-white);
+      border: 1px solid var(--green-100);
+      border-radius: var(--radius-md);
+      padding: 2.5rem;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-group { margin-bottom: 1.2rem; }
+    .form-group label {
+      display: block; font-size: 0.85rem; font-weight: 600;
+      color: var(--green-900); margin-bottom: 0.4rem;
+    }
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%; padding: 12px 16px;
+      background: var(--white);
+      border: 1.5px solid rgba(13,59,30,0.12);
+      border-radius: 10px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem; color: var(--text-dark);
+      transition: border-color var(--transition);
+      outline: none;
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+      border-color: var(--green-500);
+      box-shadow: 0 0 0 3px rgba(45,170,85,0.1);
+    }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-submit {
+      width: 100%;
+      background: var(--green-600); color: var(--white);
+      padding: 14px; border-radius: 10px;
+      font-weight: 700; font-size: 1rem;
+      cursor: pointer; border: none;
+      transition: all var(--transition);
+      font-family: 'DM Sans', sans-serif;
+    }
+    .form-submit:hover { background: var(--green-700); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+
+    /* ============================
+       MAP SECTION
+    ============================ */
+    .map-section {
+      padding: 0; height: 380px; background: var(--green-100);
+      position: relative; overflow: hidden;
+    }
+    .map-placeholder {
+      width: 100%; height: 100%;
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 1rem;
+      background: linear-gradient(135deg, var(--green-100), var(--earth-100));
+      font-size: 0.9rem; color: var(--text-mid);
+    }
+    .map-pin { font-size: 3rem; }
+    .map-address {
+      text-align: center;
+      font-weight: 500; color: var(--green-700);
+    }
+    .map-embed-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--green-600); color: var(--white);
+      padding: 10px 24px; border-radius: 50px;
+      font-size: 0.875rem; font-weight: 600;
+      transition: background var(--transition);
+    }
+    .map-embed-link:hover { background: var(--green-700); }
+
+    /* ============================
+       FOOTER
+    ============================ */
+    footer {
+      background: var(--green-900);
+      color: rgba(255,255,255,0.7);
+      padding: 80px 5% 30px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.2fr;
+      gap: 3rem; margin-bottom: 3rem;
+    }
+    .footer-brand .logo-text { color: var(--white); font-size: 1.4rem; }
+    .footer-brand p {
+      margin-top: 1rem; font-size: 0.875rem; line-height: 1.8;
+      max-width: 280px;
+    }
+    .footer-tagline {
+      display: inline-block;
+      font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); margin-top: 0.5rem;
+    }
+    .footer-col h5 {
+      color: var(--white); font-size: 0.9rem;
+      font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.1em; margin-bottom: 1.2rem;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .footer-col ul { display: flex; flex-direction: column; gap: 0.65rem; }
+    .footer-col ul li a {
+      font-size: 0.875rem; color: rgba(255,255,255,0.6);
+      transition: color var(--transition);
+    }
+    .footer-col ul li a:hover { color: var(--green-300); }
+    .footer-social {
+      display: flex; gap: 0.75rem; margin-top: 0.5rem;
+    }
+    .footer-social a {
+      width: 38px; height: 38px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; transition: all var(--transition);
+    }
+    .footer-social a:hover { background: var(--green-600); transform: translateY(-2px); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 0.8rem; flex-wrap: wrap; gap: 0.75rem;
+    }
+    .footer-bottom a { color: var(--green-300); }
+
+    /* ============================
+       FLOATING ELEMENTS
+    ============================ */
+    .float-wa {
+      position: fixed; bottom: 28px; right: 28px;
+      width: 58px; height: 58px;
+      background: #25d366;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 8px 24px rgba(37,211,102,0.45);
+      cursor: pointer; z-index: 888;
+      transition: transform var(--transition), box-shadow var(--transition);
+      animation: float-pulse 3s ease-in-out infinite;
+    }
+    .float-wa:hover { transform: scale(1.12); box-shadow: 0 12px 32px rgba(37,211,102,0.6); }
+    .float-wa svg { width: 28px; height: 28px; fill: white; }
+    @keyframes float-pulse {
+      0%,100%{box-shadow:0 8px 24px rgba(37,211,102,0.45), 0 0 0 0 rgba(37,211,102,0.4)}
+      50%{box-shadow:0 8px 24px rgba(37,211,102,0.45), 0 0 0 12px rgba(37,211,102,0)}
+    }
+    .float-wa-label {
+      position: absolute; right: 72px; top: 50%;
+      transform: translateY(-50%);
+      background: var(--white);
+      color: var(--green-700); font-weight: 600; font-size: 0.8rem;
+      padding: 6px 12px; border-radius: 8px;
+      white-space: nowrap; box-shadow: var(--shadow-md);
+      opacity: 0; pointer-events: none;
+      transition: opacity var(--transition);
+    }
+    .float-wa:hover .float-wa-label { opacity: 1; }
+
+    /* ============================
+       RESPONSIVE
+    ============================ */
+    @media (max-width: 1024px) {
+      .hero-content { grid-template-columns: 1fr; gap: 3rem; }
+      .hero-right { display: none; }
+      .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .about-img-wrap { max-width: 420px; }
+      .about-badge-float2 { right: 0; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .products-grid { grid-template-columns: 1fr 1fr; }
+      .blog-grid { grid-template-columns: 1fr; }
+      .insta-grid { grid-template-columns: repeat(3, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    }
+    @media (max-width: 768px) {
+      section { padding: 70px 5%; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .hero-stats { flex-wrap: wrap; gap: 1.5rem; }
+      .services-grid { grid-template-columns: 1fr; }
+      .products-grid { grid-template-columns: 1fr 1fr; }
+      .blog-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .newsletter-form { flex-direction: column; border-radius: var(--radius-md); }
+      .newsletter-form button { border-radius: 10px; }
+      .insta-grid { grid-template-columns: repeat(3, 1fr); }
+      .testimonial-card { min-width: calc(100% - 0rem); }
+      .values-grid { grid-template-columns: 1fr; }
+      h1 { font-size: 2.2rem; }
+    }
+    @media (max-width: 480px) {
+      .products-grid { grid-template-columns: 1fr; }
+      .insta-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-ctas { flex-direction: column; }
+      .hero-ctas a, .hero-ctas button { width: 100%; text-align: center; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Scroll Progress -->
+<div id="progress-bar"></div>
+
+<!-- ============================
+     HEADER
+============================ -->
+<header id="header">
+  <nav>
+    <a href="#home" class="nav-logo">
+      <div class="logo-icon">🌿</div>
+      <div>
+        <div class="logo-text">The <span>Agri</span> Experts™</div>
+        <div class="logo-tag">Learn • Grow • Earn</div>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#home" onclick="closeMenu()">🏠 Home</a>
+  <a href="#about" onclick="closeMenu()">🌿 About</a>
+  <a href="#services" onclick="closeMenu()">⚡ Services</a>
+  <a href="#products" onclick="closeMenu()">🛒 Products</a>
+  <a href="#blog" onclick="closeMenu()">📰 Blog</a>
+  <a href="#contact" onclick="closeMenu()">📞 Contact</a>
+</div>
+
+<!-- ============================
+     HERO
+============================ -->
+<section id="home">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content container">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        🌱 India's #1 Agri Growth Platform
+      </div>
+      <h1>
+        Transform Your Farm Into a<br>
+        <em>Thriving Business</em>
+      </h1>
+      <p class="hero-sub">
+        Expert guidance on organic farming, smart agriculture, and proven business strategies to help Indian farmers learn more, grow more, and earn more.
+      </p>
+      <div class="hero-ctas">
+        <a href="#services" class="btn-primary">🌿 Explore Services</a>
+        <a href="https://wa.me/919999999999" class="btn-wa" target="_blank" rel="noopener">📱 WhatsApp Us</a>
+        <a href="#blog" class="btn-secondary">📚 Free Tips</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num">10K+</div><div class="stat-label">Farmers Helped</div></div>
+        <div class="stat"><div class="stat-num">500+</div><div class="stat-label">Blog Articles</div></div>
+        <div class="stat"><div class="stat-num">15+</div><div class="stat-label">Years Experience</div></div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-card hero-main-card">
+        <div class="hero-card-icon">🌾</div>
+        <h4>Organic Farming Mastery</h4>
+        <p>Step-by-step guidance from soil preparation to harvest — certified organic methods that boost yield.</p>
+      </div>
+      <div class="hero-cards-row">
+        <div class="hero-card">
+          <div class="hero-card-icon">📈</div>
+          <h4>Business Growth</h4>
+          <p>Turn your farm into a profitable enterprise with our proven agri-business strategies.</p>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-icon">🎓</div>
+          <h4>Expert Training</h4>
+          <p>Learn from seasoned agriculture experts with decades of field experience.</p>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div style="display:flex;align-items:center;gap:1rem;">
+          <div style="font-size:2rem;">📍</div>
+          <div>
+            <h4 style="color:white;font-size:0.9rem;">Based in Karnal, Haryana</h4>
+            <p style="font-size:0.8rem;">Serving farmers across India since day one</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     MARQUEE
+============================ -->
+<div class="marquee-section" aria-hidden="true">
+  <div class="marquee-track" id="marquee">
+    <div class="marquee-item"><span class="marquee-dot">✦</span> Organic Farming India</div>
+    <div class="marquee-item"><span class="marquee-dot">✦</span> Smart Agriculture Tips</div>
+    <div class="marquee-item"><span class="marquee-dot">✦</span> Agri Business Growth</div>
+    <div class="marquee-item"><span class="marquee-dot">✦</span> Farm-to-Table Products</div>
+    <div class="marquee-item"><span class="marquee-dot">✦</span> Sustainable Farming</div>
+    <div class="marquee-item"><span class="marquee-dot">✦</span> Farmer Empowerment</div>
+    <div class="marquee-item"><span class="marquee-dot">✦</span> Learn • Grow • Earn</div>
+    <!-- Duplicate for seamless loop -->
+    <div class="marquee-item"><span class="marquee-dot">✦</span> Organic Farming India</div>
+    <div class="marquee-item"><span class="marquee-dot">✦</span> Smart Agriculture Tips</div>
+    <div class="marquee-item"><span class="marquee-dot">✦</span> Agri Business Growth</div>
+    <div class="marquee-item"><span class="marquee-dot">✦</span> Farm-to-Table Products</div>
+    <div class="marquee-item"><span class="marquee-dot">✦</span> Sustainable Farming</div>
+    <div class="marquee-item"><span class="marquee-dot">✦</span> Farmer Empowerment</div>
+    <div class="marquee-item"><span class="marquee-dot">✦</span> Learn • Grow • Earn</div>
+  </div>
+</div>
+
+<!-- ============================
+     ABOUT
+============================ -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal-left">
+        <div class="about-img-placeholder">🌿</div>
+        <div class="about-badge-float">
+          <div class="num">15+</div>
+          <div><div class="lbl">Years of</div><div class="lbl" style="font-weight:700;color:var(--green-700)">Agri Experience</div></div>
+        </div>
+        <div class="about-badge-float2">
+          🏆 Trusted by<br>10,000+ Farmers
+        </div>
+      </div>
+      <div class="about-right reveal-right">
+        <div class="section-label">Our Story</div>
+        <h2>Empowering Farmers to <span class="text-green">Thrive</span> in Modern Agriculture</h2>
+        <p>Founded in the fertile lands of Karnal, Haryana, The Agri Experts™ was born from a simple but powerful vision: every Indian farmer deserves access to expert agricultural knowledge and the tools to build a profitable business from their land.</p>
+        <p>From our home at House No. 33, Matluada Village, we have grown into a trusted digital platform reaching farmers across India — providing practical guidance on organic farming, smart agriculture techniques, and business growth strategies.</p>
+        <p>Our mission is to bridge the gap between traditional farming wisdom and modern agricultural science, helping you build a sustainable, profitable farm that supports your family for generations.</p>
+        <div class="values-grid">
+          <div class="value-item">
+            <span class="value-icon">🌱</span>
+            <div class="value-text">
+              <h5>Organic First</h5>
+              <p>Promoting chemical-free, sustainable farming for healthier produce</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <span class="value-icon">💡</span>
+            <div class="value-text">
+              <h5>Knowledge-Driven</h5>
+              <p>Science-backed advice combined with practical field experience</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <span class="value-icon">📊</span>
+            <div class="value-text">
+              <h5>Business-Minded</h5>
+              <p>Helping farmers see their land as a profitable business asset</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <span class="value-icon">🤝</span>
+            <div class="value-text">
+              <h5>Community-Led</h5>
+              <p>Building a network of progressive farmers across India</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     SERVICES
+============================ -->
+<section id="services">
+  <div class="container">
+    <div class="services-header reveal">
+      <div class="section-label">What We Offer</div>
+      <h2>Expert Services to <span class="text-green">Grow</span> Your Agricultural Success</h2>
+      <p>From soil to sale — we provide end-to-end support for modern farmers who want to maximize their potential.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal delay-1">
+        <div class="service-icon">🌾</div>
+        <h3>Farming Tips & Guidance</h3>
+        <p>Access a wealth of practical, season-specific farming tips covering crop selection, soil health, irrigation, pest management, and harvesting techniques tailored for Indian climates and conditions.</p>
+        <a href="#blog" class="service-link">Read Free Tips →</a>
+      </div>
+      <div class="service-card reveal delay-2">
+        <div class="service-icon">🎯</div>
+        <h3>Agri Consulting</h3>
+        <p>Get personalized one-on-one consultations with our experts to diagnose farm challenges, plan crop rotations, optimize inputs, and increase your overall farm productivity and profitability.</p>
+        <a href="#contact" class="service-link">Book Consultation →</a>
+      </div>
+      <div class="service-card reveal delay-3">
+        <div class="service-icon">📈</div>
+        <h3>Business Growth Strategies</h3>
+        <p>Learn how to brand your farm produce, reach direct buyers, leverage digital platforms, access government schemes, and transform your agricultural operation into a thriving agri-business.</p>
+        <a href="#contact" class="service-link">Start Growing →</a>
+      </div>
+      <div class="service-card reveal delay-1">
+        <div class="service-icon">🧪</div>
+        <h3>Soil & Crop Analysis</h3>
+        <p>Understand your soil composition, nutrient requirements, and crop compatibility to make data-driven farming decisions that maximize yield while minimizing input costs.</p>
+        <a href="#contact" class="service-link">Get Analysis →</a>
+      </div>
+      <div class="service-card reveal delay-2">
+        <div class="service-icon">📱</div>
+        <h3>Digital Farming Training</h3>
+        <p>Learn how to use modern apps, drones, IoT sensors, and digital market platforms to modernize your farm operations and reach buyers across India directly.</p>
+        <a href="#contact" class="service-link">Learn More →</a>
+      </div>
+      <div class="service-card reveal delay-3">
+        <div class="service-icon">🌿</div>
+        <h3>Organic Certification Help</h3>
+        <p>Navigate the organic certification process with our expert guidance — from documentation to inspection preparation — to access premium organic markets and command better prices.</p>
+        <a href="#contact" class="service-link">Get Certified →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     PRODUCTS
+============================ -->
+<section id="products">
+  <div class="container">
+    <div class="products-header reveal">
+      <div class="section-label">Farm-to-Table</div>
+      <h2>Fresh Organic <span class="text-green">Produce</span> Direct from Our Farm</h2>
+      <p>Premium quality, certified organic fruits and vegetables — grown with care in Haryana, delivered fresh to your door.</p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card reveal delay-1">
+        <div class="product-img">🍅<div class="product-badge">Organic</div></div>
+        <div class="product-info">
+          <h4>Desi Tomatoes</h4>
+          <p>Sun-ripened, chemical-free. Rich in flavor and nutrients.</p>
+        </div>
+        <div class="product-footer">
+          <div class="product-price">₹80/kg</div>
+          <a href="https://wa.me/919999999999?text=I want to order Desi Tomatoes" class="product-btn" target="_blank">Order</a>
+        </div>
+      </div>
+      <div class="product-card reveal delay-2">
+        <div class="product-img">🥬<div class="product-badge">Organic</div></div>
+        <div class="product-info">
+          <h4>Organic Spinach</h4>
+          <p>Freshly harvested, pesticide-free. Perfect for daily nutrition.</p>
+        </div>
+        <div class="product-footer">
+          <div class="product-price">₹60/bunch</div>
+          <a href="https://wa.me/919999999999?text=I want to order Organic Spinach" class="product-btn" target="_blank">Order</a>
+        </div>
+      </div>
+      <div class="product-card reveal delay-3">
+        <div class="product-img">🥕<div class="product-badge">Seasonal</div></div>
+        <div class="product-info">
+          <h4>Haryana Carrots</h4>
+          <p>Sweet, crunchy, naturally grown. No artificial colors or wax.</p>
+        </div>
+        <div class="product-footer">
+          <div class="product-price">₹55/kg</div>
+          <a href="https://wa.me/919999999999?text=I want to order Haryana Carrots" class="product-btn" target="_blank">Order</a>
+        </div>
+      </div>
+      <div class="product-card reveal delay-4">
+        <div class="product-img">🥭<div class="product-badge">Premium</div></div>
+        <div class="product-info">
+          <h4>Desi Mangoes</h4>
+          <p>Pure desi varieties — Langra & Dussehri. No calcium carbide.</p>
+        </div>
+        <div class="product-footer">
+          <div class="product-price">₹120/kg</div>
+          <a href="https://wa.me/919999999999?text=I want to order Desi Mangoes" class="product-btn" target="_blank">Order</a>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:3rem;" class="reveal">
+      <a href="https://wa.me/919999999999?text=Hi! I want to see all your organic products" class="btn-primary" style="display:inline-flex;" target="_blank">
+        📱 Order via WhatsApp — Get Full Catalogue
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     BLOG
+============================ -->
+<section id="blog">
+  <div class="container">
+    <div class="blog-header reveal">
+      <div class="section-label">Knowledge Hub</div>
+      <h2>Latest from Our <span class="text-green">Agri Blog</span></h2>
+      <p>Expert articles on organic farming, business tips, and modern agriculture — published regularly to keep you ahead.</p>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card featured reveal-left">
+        <div class="blog-img">🌾<div class="blog-category">Organic Farming India</div></div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span>📅 May 2025</span>
+            <span>⏱ 8 min read</span>
+            <span>👁 12.4K views</span>
+          </div>
+          <h3>Complete Guide to Starting Organic Farming in India: Step-by-Step for Beginners</h3>
+          <p>From soil testing and seed selection to certification and selling premium — everything you need to know to launch a successful organic farm in 2025 and beyond.</p>
+          <a href="#blog" class="blog-read">Read Full Article →</a>
+        </div>
+      </div>
+      <div class="blog-card reveal delay-1">
+        <div class="blog-img" style="font-size:2.5rem;">📊<div class="blog-category">Agri Business Ideas</div></div>
+        <div class="blog-body">
+          <div class="blog-meta"><span>📅 Apr 2025</span><span>⏱ 6 min</span></div>
+          <h3>Top 10 Profitable Agri Business Ideas for Indian Farmers in 2025</h3>
+          <p>Beyond crop production — discover how to add revenue streams with agri-processing, direct selling, and more.</p>
+          <a href="#blog" class="blog-read">Read More →</a>
+        </div>
+      </div>
+      <div class="blog-card reveal delay-2">
+        <div class="blog-img" style="font-size:2.5rem;">💧<div class="blog-category">Farming Tips India</div></div>
+        <div class="blog-body">
+          <div class="blog-meta"><span>📅 Apr 2025</span><span>⏱ 5 min</span></div>
+          <h3>Drip Irrigation Setup Guide: Save 60% Water & Boost Yields</h3>
+          <p>How to set up affordable drip irrigation on your farm and see measurable results within one season.</p>
+          <a href="#blog" class="blog-read">Read More →</a>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:3rem;" class="reveal">
+      <a href="#blog" class="btn-primary" style="display:inline-flex;background:var(--green-600);">
+        📚 View All Articles
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     TESTIMONIALS
+============================ -->
+<section id="testimonials">
+  <div class="testimonials-bg"></div>
+  <div class="container" style="position:relative;">
+    <div class="testimonials-header reveal">
+      <div class="section-label">Farmer Success Stories</div>
+      <h2 style="color:white;">Farmers Who <span style="color:var(--gold)">Transformed</span> Their Lives</h2>
+      <p>Real results from real farmers — this is what learning, growing, and earning looks like.</p>
+    </div>
+    <div class="testimonials-slider">
+      <div class="testimonials-track" id="testimonials-track">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"The Agri Experts™ completely changed how I farm. After following their organic methods, my tomato yield increased by 40% and I now sell directly to restaurants at premium prices. My income has doubled in just one season!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">R</div>
+            <div class="author-info">
+              <h5>Ramesh Kumar</h5>
+              <p>Vegetable Farmer, Sonipat, Haryana</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Maine inke blog articles padhkar apna organic certification karwaya. Ab mere products ki market mein zyada demand hai aur mujhe bahut acchi price milti hai. The Agri Experts™ best hai!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">S</div>
+            <div class="author-info">
+              <h5>Sukhwinder Singh</h5>
+              <p>Wheat & Vegetables, Amritsar, Punjab</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Their consulting helped me switch from conventional to organic farming. I was scared initially but their step-by-step guidance made it easy. Now I supply to organic stores in Delhi — my farm is finally a real business!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">P</div>
+            <div class="author-info">
+              <h5>Priya Devi</h5>
+              <p>Organic Vegetable Farmer, Meerut, UP</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Drip irrigation guide se mere pani ka kharch 50% kam ho gaya aur production badh gayi. The Agri Experts ki team ne poori help ki setup mein. Bahut helpful platform hai!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">M</div>
+            <div class="author-info">
+              <h5>Mahesh Yadav</h5>
+              <p>Farmer, Hisar, Haryana</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"I started following The Agri Experts on Instagram 6 months ago and immediately applied their tips. My mango orchard is now certified organic and I earn 3x more than before. Highly recommend to every farmer!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">A</div>
+            <div class="author-info">
+              <h5>Arjun Patel</h5>
+              <p>Mango Grower, Lucknow, UP</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slider-controls">
+      <button class="slider-btn" id="prev-btn" onclick="changeSlide(-1)" aria-label="Previous">←</button>
+      <div class="slider-dots" id="slider-dots"></div>
+      <button class="slider-btn" id="next-btn" onclick="changeSlide(1)" aria-label="Next">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     INSTAGRAM FEED
+============================ -->
+<section id="instagram">
+  <div class="container">
+    <div class="insta-header reveal">
+      <div class="section-label">Follow Us</div>
+      <div class="insta-handle">📸 @theagriexperts</div>
+      <h2>Join Our Growing <span class="text-green">Community</span></h2>
+      <p style="color:var(--text-mid);margin-top:0.5rem;">Daily farming tips, success stories, and behind-the-scenes from our fields</p>
+    </div>
+    <div class="insta-grid reveal">
+      <div class="insta-post" style="background:linear-gradient(135deg,#e8f7ed,#c3e8ce);">🌾
+        <div class="insta-overlay">❤ 2.4K<br>Wheat Harvest</div>
+      </div>
+      <div class="insta-post" style="background:linear-gradient(135deg,#f5ede0,#e8d5be);">🍅
+        <div class="insta-overlay">❤ 3.1K<br>Organic Tomatoes</div>
+      </div>
+      <div class="insta-post" style="background:linear-gradient(135deg,#e8f7ed,#d4f0dc);">🌿
+        <div class="insta-overlay">❤ 1.8K<br>Herb Farming</div>
+      </div>
+      <div class="insta-post" style="background:linear-gradient(135deg,#fff9e6,#f5e6c0);">☀️
+        <div class="insta-overlay">❤ 4.2K<br>Morning at Farm</div>
+      </div>
+      <div class="insta-post" style="background:linear-gradient(135deg,#e8f7ed,#b8e8c4);">🥬
+        <div class="insta-overlay">❤ 2.7K<br>Leafy Greens</div>
+      </div>
+      <div class="insta-post" style="background:linear-gradient(135deg,#f0f8ff,#d4eaf5);">💧
+        <div class="insta-overlay">❤ 1.5K<br>Drip Irrigation</div>
+      </div>
+    </div>
+    <div class="insta-cta reveal">
+      <a href="https://instagram.com/theagriexperts" target="_blank" rel="noopener"
+         style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#405DE6,#833AB4,#E1306C);color:white;padding:14px 32px;border-radius:50px;font-weight:600;font-size:0.95rem;transition:opacity 0.3s;"
+         onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+        📸 Follow @theagriexperts on Instagram
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     NEWSLETTER
+============================ -->
+<section id="newsletter">
+  <div class="newsletter-bg"></div>
+  <div class="container">
+    <div class="newsletter-inner reveal">
+      <div class="section-label" style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.2);color:var(--gold-light);">Free Resources</div>
+      <h2>Get Weekly Farming Tips<br>Straight to Your Inbox</h2>
+      <p>Join 10,000+ progressive farmers getting our free newsletter with seasonal crop tips, business strategies, government schemes, and market insights every week.</p>
+      <div class="newsletter-form">
+        <input type="email" placeholder="Enter your email address" id="email-input" />
+        <button onclick="submitNewsletter()">Subscribe Free 🌱</button>
+      </div>
+      <div id="newsletter-msg" style="color:var(--gold-light);margin-top:1rem;font-size:0.9rem;min-height:1.5rem;"></div>
+      <div class="newsletter-perks">
+        <div class="newsletter-perk"><span>✓</span> 100% Free</div>
+        <div class="newsletter-perk"><span>✓</span> Weekly Tips</div>
+        <div class="newsletter-perk"><span>✓</span> No Spam</div>
+        <div class="newsletter-perk"><span>✓</span> Unsubscribe Anytime</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     CONTACT
+============================ -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info reveal-left">
+        <div class="section-label">Get in Touch</div>
+        <h2>Let's <span class="text-green">Connect</span> & Grow Together</h2>
+        <p>Whether you have questions about farming techniques, want consulting, or are interested in our organic produce — we're here to help. Reach out via any channel below.</p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <div class="contact-item-text">
+              <h5>Our Location</h5>
+              <p>House No. 33, Matluada Village, Karnal, Haryana – 132001, India</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📱</div>
+            <div class="contact-item-text">
+              <h5>WhatsApp (Preferred)</h5>
+              <p><a href="https://wa.me/919999999999" style="color:var(--green-600);font-weight:600;">+91 99999 99999</a> — Fastest response</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📧</div>
+            <div class="contact-item-text">
+              <h5>Email</h5>
+              <p><a href="mailto:hello@theagriexperts.in" style="color:var(--green-600);font-weight:600;">hello@theagriexperts.in</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">🕐</div>
+            <div class="contact-item-text">
+              <h5>Working Hours</h5>
+              <p>Mon – Sat: 9:00 AM – 7:00 PM IST</p>
+            </div>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="https://instagram.com/theagriexperts" class="social-link" title="Instagram" target="_blank" rel="noopener">📸</a>
+          <a href="https://youtube.com/@theagriexperts" class="social-link" title="YouTube" target="_blank" rel="noopener">▶️</a>
+          <a href="https://facebook.com/theagriexperts" class="social-link" title="Facebook" target="_blank" rel="noopener">👥</a>
+          <a href="https://linkedin.com/company/theagriexperts" class="social-link" title="LinkedIn" target="_blank" rel="noopener">💼</a>
+          <a href="https://twitter.com/theagriexperts" class="social-link" title="Twitter/X" target="_blank" rel="noopener">🐦</a>
+          <a href="https://pinterest.com/theagriexperts" class="social-link" title="Pinterest" target="_blank" rel="noopener">📌</a>
+        </div>
+      </div>
+      <div class="contact-form reveal-right">
+        <h3 style="margin-bottom:1.5rem;">Send Us a Message</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" placeholder="+91 XXXXX XXXXX" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="your@email.com" />
+        </div>
+        <div class="form-group">
+          <label for="subject">I'm interested in</label>
+          <select id="subject">
+            <option value="">Select a topic...</option>
+            <option>Farming Tips & Guidance</option>
+            <option>Agri Consulting</option>
+            <option>Business Growth Strategy</option>
+            <option>Organic Produce Order</option>
+            <option>Organic Certification Help</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message *</label>
+          <textarea id="message" placeholder="Tell us about your farm, your challenges, or what you need help with..." required></textarea>
+        </div>
+        <button class="form-submit" onclick="submitForm()">Send Message 🌿</button>
+        <p style="text-align:center;font-size:0.8rem;color:var(--text-light);margin-top:1rem;">
+          Or WhatsApp us directly: <a href="https://wa.me/919999999999" style="color:var(--green-600);font-weight:600;" target="_blank">+91 99999 99999</a>
+        </p>
+        <div id="form-msg" style="text-align:center;margin-top:0.5rem;font-size:0.9rem;min-height:1.5rem;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     MAP
+============================ -->
+<div class="map-section">
+  <div class="map-placeholder">
+    <div class="map-pin">📍</div>
+    <div class="map-address">
+      <strong>The Agri Experts™</strong><br>
+      House No. 33, Matluada Village<br>
+      Karnal, Haryana – 132001, India
+    </div>
+    <a href="https://maps.google.com/?q=Matluada+Village+Karnal+Haryana+India" target="_blank" rel="noopener" class="map-embed-link">
+      🗺 Open in Google Maps
+    </a>
+  </div>
+</div>
+
+<!-- ============================
+     FOOTER
+============================ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <div class="logo-icon">🌿</div>
+          <div>
+            <div class="logo-text">The <span>Agri</span> Experts™</div>
+            <div class="logo-tag">Learn • Grow • Earn</div>
+          </div>
+        </div>
+        <p>India's trusted platform for organic farming, smart agriculture, and agri business growth. Empowering farmers from Karnal, Haryana to thrive in modern agriculture.</p>
+        <span class="footer-tagline">🌱 Learn • Grow • Earn</span>
+        <div class="footer-social" style="margin-top:1.5rem;">
+          <a href="https://instagram.com/theagriexperts" title="Instagram" target="_blank" rel="noopener">📸</a>
+          <a href="https://youtube.com/@theagriexperts" title="YouTube" target="_blank" rel="noopener">▶️</a>
+          <a href="https://facebook.com/theagriexperts" title="Facebook" target="_blank" rel="noopener">👥</a>
+          <a href="https://linkedin.com/company/theagriexperts" title="LinkedIn" target="_blank" rel="noopener">💼</a>
+          <a href="https://twitter.com/theagriexperts" title="Twitter/X" target="_blank" rel="noopener">🐦</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#products">Organic Products</a></li>
+          <li><a href="#blog">Blog & Articles</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Top Articles</h5>
+        <ul>
+          <li><a href="#blog">Organic Farming India</a></li>
+          <li><a href="#blog">Farming Tips India</a></li>
+          <li><a href="#blog">Agri Business Ideas</a></li>
+          <li><a href="#blog">Drip Irrigation Guide</a></li>
+          <li><a href="#blog">Organic Certification</a></li>
+          <li><a href="#blog">Government Schemes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="#">📍 Matluada Village, Karnal, Haryana</a></li>
+          <li><a href="https://wa.me/919999999999">📱 WhatsApp: +91 99999 99999</a></li>
+          <li><a href="mailto:hello@theagriexperts.in">📧 hello@theagriexperts.in</a></li>
+          <li><a href="https://instagram.com/theagriexperts">📸 @theagriexperts</a></li>
+        </ul>
+        <div style="margin-top:1.5rem;">
+          <a href="https://wa.me/919999999999" target="_blank" rel="noopener"
+             style="display:inline-flex;align-items:center;gap:8px;background:#25d366;color:white;padding:10px 20px;border-radius:50px;font-size:0.875rem;font-weight:600;">
+            📱 Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 The Agri Experts™ | All Rights Reserved | House No. 33, Matluada Village, Karnal, Haryana, India</p>
+      <p>
+        <a href="#">Privacy Policy</a> &nbsp;|&nbsp;
+        <a href="#">Terms of Use</a> &nbsp;|&nbsp;
+        <a href="#">Sitemap</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================
+     FLOATING WHATSAPP
+============================ -->
+<a href="https://wa.me/919999999999?text=Hello! I found you on theagriexperts.in and need help." target="_blank" rel="noopener" class="float-wa" aria-label="Chat on WhatsApp">
+  <span class="float-wa-label">Chat with us!</span>
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+  </svg>
+</a>
+
+<!-- ============================
+     JAVASCRIPT
+============================ -->
+<script>
+  // ---- Scroll Progress ----
+  window.addEventListener('scroll', () => {
+    const bar = document.getElementById('progress-bar');
+    const scrolled = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    bar.style.width = scrolled + '%';
+  });
+
+  // ---- Header scroll effect ----
+  window.addEventListener('scroll', () => {
+    const header = document.getElementById('header');
+    header.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // ---- Mobile menu ----
+  function toggleMenu() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('mobile-menu').classList.remove('open');
+  }
+
+  // ---- Reveal on scroll ----
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right')
+    .forEach(el => observer.observe(el));
+
+  // ---- Testimonials Slider ----
+  let currentSlide = 0;
+  const track = document.getElementById('testimonials-track');
+  const cards = track ? track.querySelectorAll('.testimonial-card') : [];
+  const dotsEl = document.getElementById('slider-dots');
+
+  function getVisibleCount() {
+    return window.innerWidth < 768 ? 1 : 3;
+  }
+
+  function initDots() {
+    if (!dotsEl) return;
+    dotsEl.innerHTML = '';
+    const count = Math.ceil(cards.length / getVisibleCount());
+    for (let i = 0; i < count; i++) {
+      const dot = document.createElement('div');
+      dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
+      dot.onclick = () => goToSlide(i);
+      dotsEl.appendChild(dot);
+    }
+  }
+
+  function goToSlide(idx) {
+    const total = Math.ceil(cards.length / getVisibleCount());
+    currentSlide = (idx + total) % total;
+    const cardWidth = cards[0] ? cards[0].offsetWidth + 24 : 0;
+    const visibleCount = getVisibleCount();
+    track.style.transform = `translateX(-${currentSlide * visibleCount * cardWidth}px)`;
+    document.querySelectorAll('.slider-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === currentSlide);
+    });
+  }
+
+  function changeSlide(dir) { goToSlide(currentSlide + dir); }
+
+  // Auto-advance
+  setInterval(() => changeSlide(1), 5000);
+
+  window.addEventListener('load', () => {
+    initDots();
+  });
+  window.addEventListener('resize', initDots);
+
+  // ---- Newsletter ----
+  function submitNewsletter() {
+    const email = document.getElementById('email-input').value;
+    const msg = document.getElementById('newsletter-msg');
+    if (!email || !email.includes('@')) {
+      msg.textContent = '⚠ Please enter a valid email address.';
+      return;
+    }
+    msg.textContent = '✅ Thank you! Welcome to The Agri Experts™ family. Check your inbox!';
+    document.getElementById('email-input').value = '';
+  }
+
+  // ---- Contact Form ----
+  function submitForm() {
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const message = document.getElementById('message').value;
+    const msg = document.getElementById('form-msg');
+    if (!name || !phone || !message) {
+      msg.style.color = '#e74c3c';
+      msg.textContent = '⚠ Please fill all required fields.';
+      return;
+    }
+    msg.style.color = 'var(--green-600)';
+    msg.textContent = '✅ Message sent! We will contact you within 24 hours.';
+    // Optional: open WhatsApp with the message
+    const waMsg = encodeURIComponent(`Hi! I'm ${name} from theagriexperts.in website.\nPhone: ${phone}\n\n${message}`);
+    setTimeout(() => window.open(`https://wa.me/919999999999?text=${waMsg}`, '_blank'), 1000);
+  }
+
+  // ---- Smooth active nav link ----
+  const sections = document.querySelectorAll('section[id]');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 120) current = s.id;
+    });
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--green-700)' : '';
+    });
+  });
+</script>
+</body>
+</html>
